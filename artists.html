@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+        @media (min-width: 576px) {
+            #centerRow {
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #centerRow {
+                width: 60%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #centerRow {
+                width: 50%;
+            }
+        }
+        @media (min-width: 1000px) {
+            #centerRow {
+                width: 35%;
+            }
+        }
+
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:visited,
+        .btn-secondary {
+            background-color: rgb(45, 57, 119) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+
+        }
+
+        body {
+            background-image: url("flowerPattern 2.jpeg");
+            /* background: rgba(0, 0, 0, 0); */
+           
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+            
+        }
+
+        #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: 50%;
+            padding: 0;
+        }
+
+        #titleBanner {
+            margin-top: .5em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        li>a {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        h1 {
+
+
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        .modal-title {
+            font-size: 2em;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        h5 {
+
+            border-radius: .2em;
+            margin-top: .25em;
+        }
+
+        p {
+            padding: .2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 2em;
+            background-color: white;
+        }
+
+        .col {
+            background-color: rgb(175, 211, 223);
+            padding: 2em;
+
+        }
+
+        .card {
+            margin-bottom: 2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+        }
+
+        .card-title {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+
+<!-- Modal patrick-->
+<div class="modal fade" id="hopeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-block">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Years Attended: 6
+                </h3>
+                <h2>
+                    Burning man projects and affiliations:
+                </h2>
+
+                <p>
+                    i have been attending burning man since i was 14 and doing art since i could hold a pencil. in my years at the burn i have assisted on several art projects / burn perimeters including the mazu temple in 2015 and the foley in 2019.  Ive also helped wylbur with his LED art pieces in camp the past two years i’ve been with JOBI.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal annmarie-->
+<div class="modal fade" id="annmarieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Biography</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Years Attended: 9
+                </h3>
+                <h2>
+                    Burning man projects and affiliations:
+                </h2>
+
+                <p>
+                    Throughout my years at the burn, I’ve been involved in a variety of projects. As a TCO I’ve spoken
+                    at, and helped to organize, the annual conference. As part of the CAMP Support team I mentor other
+                    camps that are new and/or have challenges. With that, I also support Yeti in the logistics of Camp
+                    Support. With the Cultural Direction Setting team I worked on the GANNT chart for the various burn
+                    committees. For art, I’ve built on the temples twice off playa, and once on playa, as well as built
+                    on the lighthouses and the Folly. On playa I served as a docent for the Folly, and was part of a
+                    team that kept it from burning prematurely.
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal hope-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Biography</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Years Attended: 13
+                </h3>
+                <h2>
+                    Burning man projects and affiliations:
+                </h2>
+
+                <p>
+                    Wylbur has built several LED-based art pieces, all shown at JOBI. The Blinky Mirror was 4’x6’ interactive LED mirror that enabled dancing participants to paint their movements onto a smoothly diffused screen as random shadow effects created a sense of digital grain. 
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<body class="bg-secondary.bg-gradient ">
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">JOBI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projectDetails.html">Project Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Artists</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <div class="container text-center align-items-center">
+        <div class="row align-items-center" id="centerRow">
+            <div class="col align-items-center">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lead Artist</h5>
+                        <p class="card-text">Patrick Ball</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Biography
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body align-text-center">
+                        <h5 class="card-title">Project Manager</h5>
+                        <p class="card-text align-text-center">Ann-Marie Benz</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#annmarieModal">
+                            Biography
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Assistant Artist</h5>
+                        <p class="card-text">Hope Howard</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#hopeModal">
+                            Biography
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
