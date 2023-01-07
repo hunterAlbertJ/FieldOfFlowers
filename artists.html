@@ -40,42 +40,44 @@
             
         }
 
-        #centerRow {
+         #centerRow {
             margin: auto;
         }
 
         #centerRow {
             width: auto;
             padding: 0;
-        }
+        } 
         @media all and(min-width: 576px) {
             #centerRow {
                 width: auto;
             }
         }
 
-        @media all and(min-width: 992px) {
-            #centerRow {
-                width: 70;
-            }
-        }
-
         @media all and(min-width: 768px) {
-            #centerRow {
-                width: 70;
-            }
-        }
-        @media all and(min-width: 1000px) {
-            #centerRow{
-                width: 70;
-            }
-        }
-        @media all and(min-width: 1200px) {
             #centerRow {
                 width: 70%;
             }
         }
-    
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+            width: 60%;
+            padding: 0;
+        } 
+ /* your code here */
+}
 
         #titleBanner {
             margin-top: .5em;
@@ -188,6 +190,38 @@
         </div>
     </div>
 </div>
+<!-- Modal Dan-->
+<div class="modal fade" id="danModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Biography</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Years Attended: 6 1/2
+                </h3>
+                <h2>
+                    Burning man projects and affiliations:
+                </h2>
+
+                <p>
+                    Dan Has been a graphic designer for 32+ years with a background in traditional printing. Recently he has been exploring sculpting in virtual space, 3d printing and resin casting.
+
+                    He has attended 6 1/2 burns since 2015. He has helped build and maintain The Blinky Mirror with Patrick Ball and Jobi in the past.
+                    
+                    Dan’s experience with 3d printing and resin casting is helping the project realize its vision. 
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Modal annmarie-->
 <div class="modal fade" id="annmarieModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -274,6 +308,9 @@
                             <a class="nav-link" href="projectDetails.html">Project Details</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Artists</a>
                         </li>
 
@@ -321,6 +358,17 @@
                         <p class="card-text">Hope Howard</p>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#hopeModal">
+                            Biography
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                    <img src="squareDan.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                    <div class="card-body">
+                        <h5 class="card-title">Materials Engineer</h5>
+                        <p class="card-text">Dan Reiter</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#danModal">
                             Biography
                         </button>
                     </div>

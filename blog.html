@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JOBI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+      
+
+       
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:visited,
+        .btn-secondary {
+            background-color: rgb(45, 57, 119) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+
+        }
+
+        body {
+            background-image: url("flowerPattern 2.jpeg");
+            /* background: rgba(0, 0, 0, 0); */
+           
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+            
+        }
+
+         #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: auto;
+            padding: 0;
+        } 
+        @media all and(min-width: 576px) {
+            #centerRow {
+                width: auto;
+            }
+        }
+
+        @media all and(min-width: 768px) {
+            #centerRow {
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+            width: 60%;
+            padding: 0;
+        } 
+ /* your code here */
+}
+
+        #titleBanner {
+            margin-top: .5em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        li>a {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        h1 {
+
+
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        .modal-title {
+            font-size: 2em;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        h5 {
+
+            border-radius: .2em;
+            margin-top: .25em;
+        }
+
+        p {
+            padding: .2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+           
+            background-color: white;
+        }
+
+        .col {
+            background-color: rgb(175, 211, 223);
+            padding: 2em;
+
+        }
+
+        .card {
+            margin-bottom: 2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+        }
+
+        .card-title {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+        a{
+            color: rgb(45, 57, 119);
+        }
+    </style>
+</head>
+
+<!-- Modal blog1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    First day of prototyping 
+                </h3>
+                <p>
+                    Today we cast the first small pieces of resin so that we can test how the LEDs look when embedded. We used 12 different color tints, plus a control, then we illuminated LEDs from underneath. (we call the test casts "muffins")
+                </p>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Coz757qmKoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </iframe>
+      <p>
+        (video of LEDs are always pretty terrible, alas) In the videos, all the LEDs are the same color for each of the muffins, so you can see how the tints affect the apparent color. We are looking for a tint that makes the flowers look good (see the still image for the un-illuminated colors) but does not interfere with the hue projected by the LEDs. A few of these tints seem like good candidates.  
+      </p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/EESfywfdz0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<body class="bg-secondary.bg-gradient ">
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">JOBI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projectDetails.html">Project Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artists.html">Artists</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <div class="container text-center align-items-center" id="container">
+        <div class="row align-items-center" id="centerRow">
+            <div class="col align-items-center">
+                <h1>
+                    Blogs
+                </h1>
+                <div class="card" style="width: 100%;">
+                    <img src="castingTest.jpg" class="card-img-top" alt="https://via.placeholder.com/300">
+                    <div class="card-body">
+                       
+                        <h5 class="card-text">Jan 2nd 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            First Day Of Casting
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
