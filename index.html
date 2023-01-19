@@ -4,6 +4,9 @@
 <head>
     <title>JOBI</title>
     <!-- Required meta tags -->
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="poisson_disc.js"></script>
+    <script src="color.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Field of flowers website to showcase the progress of the project.">
@@ -29,8 +32,18 @@
             background-color: white;
 
         }
+        #parent{
+         
+         flex-grow: 1;
+         flex-shrink: 0;
+         flex-basis: 50%;
+         height: 100%;
+         color: white;
+         font-size: 40px;
+     
+             }
         #fullScreenFlowers {
-            
+
             width: 100%;
             padding: 0;
             border: 5px solid rgb(0, 0, 0);
@@ -52,7 +65,7 @@
             background-color: rgb(45, 57, 119) !important;
             border-radius: .2em;
             box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
-            margin-bottom: 1em;
+            margin-bottom: .5em;
             font-family: 'Amatic SC', bold;
             font-size: 1.5em;
 
@@ -123,65 +136,360 @@
             height: 100vh;
             display: flex;
         }
-    </style>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ">
-                <div class="modal-header">
 
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-block justify-content-center">
-                    <div id="individualFlowers" class="carousel carousel-dark" data-bs-ride="carousel"
-                        data-bs-interval="1000000">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="flower1.png"
-                                    class="d-block w-100" alt="flower1.png">
-                                <div class="carousel-caption d-flex d-md-block">
+        #container {
 
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="flower2.png" class="d-block w-100" alt="flower1.png">
-                                <div class="carousel-caption d-none d-md-block">
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 50%;
+            height: 100%;
+            color: white;
+            font-size: 40px;
 
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="flower3.png" class="d-block w-100" alt="flower1.png">
-                                <div class="carousel-caption d-none d-md-block">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#individualFlowers"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#individualFlowers"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    
-                </div>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-           
+        }
+        #demoModal{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-left: 7em;
+            padding-right: 7em;
+            padding-bottom: 5em;
+        }
+        #centerHelper{
+            display: flex;
+            justify-content: center;
+        }
+        #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: auto;
+            padding: 0;
+        } 
+        @media all and(min-width: 576px) {
+            #centerRow {
+                width: auto;
+            }
+        }
+
+        @media all and(min-width: 768px) {
+            #centerRow {
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+            width: 60%;
+            padding: 0;
+            }
             
+            #demoModal{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-left: 15em;
+            padding-right: 15em;
+            padding-bottom: 5em;
+            }
+        
+        } 
+        #launch{
+            margin-top: .5em;
+        }
+    
+    </style>
+<div id="centerHelper">
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header text-center">
+                <h1 class="modal-title w-100">Click In The Field!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block justify-content-center">
+                <div id="individualFlowers" class="carousel carousel-dark" data-bs-ride="carousel"
+                    data-bs-interval="1000000">
+                    <!-- <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#individualFlowers" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div> -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div id="parent"class="card" style="width: 100%;">
+                                <script>
+                                    const SCREEN_WIDTH = screen.width / 2.25
+                                    const SCREEN_HEIGHT = screen.height / 2.25
+                                
+                                    const NUM_FLOWERS = screen.height / 15;
+                                    const WAVE_MAX_RADIUS = 1200;
+                                    const WAVE_THICKNESS = 300;
+                                    const WAVE_SPEED = 0.4; // pixels per millisecond
+                                
+                                
+                                    var config = {
+                                        type: Phaser.AUTO,
+                                        width: SCREEN_WIDTH,
+                                        height: SCREEN_HEIGHT,
+                                        parent: "parent",
+                                        physics: {
+                                            default: 'arcade',
+                                            arcade: {
+                                                //gravity: { y: 300 },
+                                                debug: false
+                                            }
+                                        },
+                                        scene: {
+                                            preload: preload,
+                                            create: create,
+                                            update: update
+                                        }
+                                    };
+                                
+                                    // Todo
+                                    //  set color of flowers using tint
+                                    //    can get fancier by computing needed color for all four corners and setting those separetly
+                                
+                                    // Visible objects
+                                    var person;
+                                    var graphics;
+                                
+                                    var waves = new Set();
+                                    var flowers = new Set();
+                                
+                                    var game = new Phaser.Game(config);
+                                   
+                                    
+                                    function preload ()
+                                    {
+                                        
+                                        // TODO: add a dark deserty background
+                                        this.load.image('flower1', 'images/daisy.png')
+                                        this.load.image('flower2', 'images/crocus.png')
+                                        this.load.image('flower3', 'images/buttercup.png')
+                                        this.load.image('person', 'images/person.png')
+                                    }
+                                
+                                    function place_flowers (scene)
+                                    {
+                                        flower_image_handles = ['flower1', 'flower2', 'flower3']
+                                        flower_locations = poisson_disc_sample(SCREEN_WIDTH, SCREEN_HEIGHT, NUM_FLOWERS);
+                                        console.log("Selected " + flower_locations.length + " flower locations.");
+                                        for (let i = 0; i < flower_locations.length; i++) {
+                                          //var x = Math.random() * SCREEN_WIDTH;
+                                          //var y = Math.random() * SCREEN_HEIGHT;
+                                          let x = flower_locations[i].x;
+                                          let y = flower_locations[i].y;
+                                          let flower_type = flower_image_handles[Math.floor(Math.random() * flower_image_handles.length)];
+                                          flower = scene.add.image(x, y, flower_type);
+                                          flowers.add(flower)
+                                        } 
+                                    }
+                                
+                                    function start_wave (context) 
+                                    {
+                                        console.log('starting wave');
+                                        var new_wave = {
+                                            x: person.x,
+                                            y: person.y,
+                                            r: 0,
+                                            hue: Math.random()
+                                        }
+                                        waves.add(new_wave)
+                                
+                                        this.tweens.addCounter({
+                                            from: 0,
+                                            to: WAVE_MAX_RADIUS,
+                                            duration: WAVE_MAX_RADIUS / WAVE_SPEED,  // milliseconds
+                                            onUpdate: function (tween)
+                                            {
+                                                new_wave.r = tween.getValue();
+                                            },
+                                            onComplete: function (tween)
+                                            {
+                                                waves.delete(new_wave)
+                                            }
+                                        });
+                                    }
+                                
+                                    function create ()
+                                    {
+                                        //Phaser.Canvas.setTouchAction(game.canvas, "auto"); // disable the default "none"
+                                        
+                                        graphics = this.add.graphics();
+                                
+                                        place_flowers(this);
+                                        person = this.physics.add.sprite(200, 450, 'person');
+                                        person.setCollideWorldBounds(true);
+                                
+                                        this.input.on('pointermove', function (pointer) {
+                                            person.x = pointer.x;
+                                            person.y = pointer.y;
+                                        });
+                                       // this.input.mouseWheel.stop()
+                                        this.input.on('pointerdown', start_wave, this);
+                                        
+                                        
+                                    }
+                                
+                                    function update()
+                                    {
+                                        //draw_waves();
+                                        flowers_react();
+                                    }
+                                
+                                    function draw_waves()
+                                    {
+                                        graphics.clear();
+                                        graphics.lineStyle(WAVE_THICKNESS, 0xffffff);
+                                        for (const wave of waves) {
+                                            graphics.beginPath();
+                                            graphics.arc(wave.x, wave.y, wave.r, Phaser.Math.DegToRad(0), Phaser.Math.DegToRad(360), false, 0.02);
+                                            graphics.strokePath();
+                                            graphics.closePath();
+                                        }
+                                    }
+                                
+                                    function flowers_react()
+                                    {
+                                        for (const flower of flowers) {
+                                            let min_distance_from_wave_ridge = SCREEN_WIDTH;
+                                            let waves_this_flower_is_in = [];
+                                            // TODO: make this some kind of functional list comprehension
+                                            for (const wave of waves) {
+                                                let dist_from_wave_center = distance(flower, wave)
+                                                var dist_from_wave_ridge = Math.abs(dist_from_wave_center - wave.r);
+                                                if (dist_from_wave_ridge < WAVE_THICKNESS / 2) {
+                                                    waves_this_flower_is_in.push(wave);
+                                                    min_distance_from_wave_ridge = Math.min(
+                                                        min_distance_from_wave_ridge, dist_from_wave_ridge);
+                                                }
+                                            }
+                                            if (waves_this_flower_is_in.length == 0) {
+                                                // flowers not in any wave are white.
+                                                flower.setTint(0xffffff)
+                                                continue
+                                            }
+                                            // Hue will be determined by combining hues for all waves this flower is in.
+                                            let hue = null;
+                                            if (waves_this_flower_is_in.length == 1) {
+                                                hue = waves_this_flower_is_in[0].hue;
+                                            } else {
+                                                let wave_hues = waves_this_flower_is_in.map(wave => wave.hue);
+                                                hue = maximally_distant_hue(wave_hues);
+                                            }
+                                            // saturate according to distance from nearest wave ridge
+                                            let sat = 1 - (min_distance_from_wave_ridge / (WAVE_THICKNESS / 2));
+                                            let bri = 1.0;
+                                            let color = new Phaser.Display.Color();
+                                            color.setFromHSV(hue, sat, bri)
+                                            flower.setTint(color.color);
+                                        }
+                                    }
+                                    
+                                    </script>
+                            </div>
+            
+                        </div>
+                        
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#individualFlowers"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#individualFlowers"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
+
+
     </div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block justify-content-center">
+                <div id="zoomFlowers" class="carousel carousel-dark" data-bs-ride="carousel"
+                    data-bs-interval="1000000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#zoomFlowers" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#zoomFlowers" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#zoomFlowers" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="flower1.png"
+                                class="d-block w-100" alt="flower1.png">
+                            <div class="carousel-caption d-flex d-md-block">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="flower2.png" class="d-block w-100" alt="flower1.png">
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="flower3.png" class="d-block w-100" alt="flower1.png">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#zoomFlowers"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#zoomFlowers"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+            </div>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+       
+        
     </div>
+</div>
+</div>
 </head>
 
 <body class="bg-secondary.bg-gradientß ">
@@ -216,10 +524,10 @@
         </nav>
     </main>
     <div class="container text-center">
-        <div class="row align-items-center">
+        <div class="row align-items-center" id="centerRow">
             <div class="col">
                 <div>
-                    
+
                     <h1>
                         Field Of Flowers
                     </h1>
@@ -235,9 +543,29 @@
                         More Details
                     </button>
                     <button class="btn btn-primary" onclick="window.location.href = 'blog.html';">
-                       Blog Updates      
+                        Blog Updates
                     </button>
                 </div>
+                <h1>
+                    Interactive Demo
+                </h1>
+                <div id="demoCaptions" class="carousel carousel-dark" data-bs-ride="carousel"
+                    data-bs-interval="1000000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-toggle="modal"
+                        data-bs-target="#demoModal">
+                            <img src="demoImg.webp" class="d-block w-100" alt="field1.png">
+                            <div class="carousel-caption d-flex d-md-block">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#demoModal" id="launch">Launch Demo</button>
+                
+
                 <div id="carouselExampleCaptions" class="carousel carousel-dark" data-bs-ride="carousel"
                     data-bs-interval="1000000">
                     <div class="carousel-indicators">
@@ -278,13 +606,16 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+               
+               
+              
                 <div>
                     <p id="secondTitle">
                         Individual Flower Examples
                     </p>
                 </div>
-                <div id="mainFlowers" class="carousel carousel-dark" data-bs-ride="carousel"
-                    data-bs-interval="1000000">
+                
+                <div id="mainFlowers" class="carousel carousel-dark" data-bs-ride="carousel" data-bs-interval="1000000">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#mainFlowers" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
@@ -302,16 +633,19 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img data-bs-toggle="modal" data-bs-target="#exampleModal"src="flower2.png" class="d-block w-100" alt="flower1.png">
+                            <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="flower2.png"
+                                class="d-block w-100" alt="flower1.png">
                             <div class="carousel-caption d-none d-md-block">
 
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="flower3.png" class="d-block w-100" alt="flower1.png">
+                            <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="flower3.png"
+                                class="d-block w-100" alt="flower1.png">
                             <div class="carousel-caption d-none d-md-block">
                             </div>
                         </div>
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#mainFlowers"
                         data-bs-slide="prev">

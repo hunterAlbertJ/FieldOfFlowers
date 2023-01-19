@@ -79,6 +79,53 @@
         #mainElement{
             height: 100vh;
         }
+        #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: auto;
+            padding: 0;
+        } 
+        @media all and(min-width: 576px) {
+            #centerRow {
+                width: auto;
+            }
+        }
+
+        @media all and(min-width: 768px) {
+            #centerRow {
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+            width: 80%;
+            padding: 0;
+            }
+        }
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+            width: 60%;
+            padding: 0;
+            }
+            
+            #demoModal{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-left: 15em;
+            padding-right: 15em;
+            padding-bottom: 5em;
+            }
+        
+        } 
     </style>
 </head>
 
