@@ -163,6 +163,9 @@
         a{
             color: rgb(45, 57, 119);
         }
+        #secondImg{
+            margin-top: 1em;
+        }
     </style>
 </head>
 
@@ -187,6 +190,79 @@
         (video of LEDs are always pretty terrible, alas) In the videos, all the LEDs are the same color for each of the muffins, so you can see how the tints affect the apparent color. We are looking for a tint that makes the flowers look good (see the still image for the un-illuminated colors) but does not interfere with the hue projected by the LEDs. A few of these tints seem like good candidates.  
       </p>
       <iframe width="100%" height="250em" src="https://www.youtube.com/embed/EESfywfdz0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal blogJan10-->
+<div class="modal fade" id="Jan10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Simple Shapes
+                </h3>
+                <p>
+                    We have started casting simple shapes in translucent resin. Our first experiments at a reasonable scale are about 6" in diameter and 1 1/4" thick. We put LEDs in (simple, slow WS2812Bs, if that means anything to you) and looked at the color fades. 
+                </p>
+                <p>
+                <iframe width="100%" height="250em" src="https://www.youtube.com/embed/SDYvDGddDvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </iframe> </p>
+      <p>
+        In the first image below, we show how we set up the jig to hold the LED strand and diffusion sheath. And in the second, we show how the jig holds the LED strand in the resin as it cures.  
+      </p>
+      <p>
+        <img src="Jan10p1.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+      </p>
+      <p id="secondImg">
+        <img src="Jan10p2.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+      </p>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Jan14-->
+<div class="modal fade" id="Jan14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Shaped Resin Casts
+                </h3>
+                <p>
+                    We've now made a few somewhat-interestingly shaped resin casts with LEDs in them (still the slow WS2812s...). We found for sale a silicone mold for pies that has a flower-like look. We used the same plywood jig trick to mount the LEDs in a spiral and set them in resin (see below). 
+                </p>
+                <p>
+                    <img src="Jan14.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    Then we cast a few leaves in somewhat arbitrary shapes and with lots of different counts of LEDs in them so we have a sense of how many lights we'll need. We now have a full flower, with leaves to look at and think about. See the video for how it looks.
+                 </p>
+                 <p>
+                    Next step: writing software to have a reasonable prototype of a wave passing over the flower. We're going to start with  <a href="https://fastled.io" target="_blank"><em><u>FastLED</u></em></a> but there will be a lot of software iterations, I suspect.
+                 </p>
+                 <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/Am_glrtFMVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </iframe> </p>
+                
                 
             </div>
             <div class="modal-footer">
@@ -237,6 +313,28 @@
                     Blogs
                 </h1>
                 <div class="card" style="width: 100%;">
+                    <img src="Jan14.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                    <div class="card-body">
+                       
+                        <h5 class="card-text">Jan 14th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Jan14">
+                            Complex Shaped Resin Casts
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                    <img src="Jan10p1.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                    <div class="card-body">
+                       
+                        <h5 class="card-text">Jan 10th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Jan10">
+                            Simple Shapes
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
                     <img src="castingTest.jpg" class="card-img-top" alt="https://via.placeholder.com/300">
                     <div class="card-body">
                        
@@ -247,6 +345,9 @@
                         </button>
                     </div>
                 </div>
+
+              
+
 
 
 
