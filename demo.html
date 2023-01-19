@@ -3,8 +3,8 @@
 
 <head>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    <script src="poisson_disc.js"></script> 
-    <script src="color.js"></script> 
+    <script src="poisson_disc.js"></script>
+    <script src="color.js"></script>
     <title>JOBI</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -18,9 +18,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
-      
 
-       
+
+
         .btn-primary,
         .btn-primary:hover,
         .btn-primary:active,
@@ -38,19 +38,21 @@
         body {
             background-image: url("flowerPattern 2.jpeg");
             /* background: rgba(0, 0, 0, 0); */
-           
+
             box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
-            
+          
+
         }
 
-         #centerRow {
+        #centerRow {
             margin: auto;
         }
 
         #centerRow {
             width: auto;
             padding: 0;
-        } 
+        }
+
         @media all and(min-width: 576px) {
             #centerRow {
                 width: auto;
@@ -62,25 +64,29 @@
                 width: 70%;
             }
         }
+
         @media screen and (max-width: 999px) and (min-width: 769px) {
             #centerRow {
-            width: 80%;
-            padding: 0;
+                width: 80%;
+                padding: 0;
             }
         }
+
         @media screen and (max-width: 1299px) and (min-width: 1000px) {
             #centerRow {
-            width: 80%;
-            padding: 0;
+                width: 80%;
+                padding: 0;
             }
         }
+
         @media screen and (max-width: 10069px) and (min-width: 1300px) {
             #centerRow {
-            width: 60%;
-            padding: 0;
-        } 
- /* your code here */
-}
+                width: 60%;
+                padding: 0;
+            }
+
+            /* your code here */
+        }
 
         #titleBanner {
             margin-top: .5em;
@@ -102,13 +108,12 @@
         }
 
         h1 {
-
-
-
             font-family: 'Amatic SC', cursive;
             color: white;
             background-color: rgb(45, 57, 119);
             border-radius: .2em;
+            text-align: center;
+            margin: .25em;
         }
 
         h3 {
@@ -132,12 +137,17 @@
             margin-top: .25em;
         }
 
+        #parent {
+            display: flex;
+  justify-content: center;
+        }
+
         p {
             padding: .2em;
             border: 1px solid black;
             border-radius: .2em;
             box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
-           
+
             background-color: white;
         }
 
@@ -158,22 +168,20 @@
             font-family: 'Amatic SC', cursive;
             font-size: 2em;
         }
+
         .card-text {
             font-family: 'Amatic SC', cursive;
             font-size: 2em;
         }
-        a{
+
+        a {
             color: rgb(45, 57, 119);
         }
-        #container{
-         
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 50%;
-    height: 100%;
-    color: white;
-    font-size: 40px;
 
+        #container {
+            background-color: rgb(175, 211, 223);
+            
+            
         }
     </style>
 </head>
@@ -188,18 +196,29 @@
             </div>
             <div class="modal-body d-block text-center">
                 <h3>
-                    First day of prototyping 
+                    First day of prototyping
                 </h3>
                 <p>
-                    Today we cast the first small pieces of resin so that we can test how the LEDs look when embedded. We used 12 different color tints, plus a control, then we illuminated LEDs from underneath. (we call the test casts "muffins")
+                    Today we cast the first small pieces of resin so that we can test how the LEDs look when embedded.
+                    We used 12 different color tints, plus a control, then we illuminated LEDs from underneath. (we call
+                    the test casts "muffins")
                 </p>
-                <iframe width="100%" height="250em" src="https://www.youtube.com/embed/Coz757qmKoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </iframe>
-      <p>
-        (video of LEDs are always pretty terrible, alas) In the videos, all the LEDs are the same color for each of the muffins, so you can see how the tints affect the apparent color. We are looking for a tint that makes the flowers look good (see the still image for the un-illuminated colors) but does not interfere with the hue projected by the LEDs. A few of these tints seem like good candidates.  
-      </p>
-      <iframe width="100%" height="250em" src="https://www.youtube.com/embed/EESfywfdz0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                
+                <iframe width="100%" height="250em" src="https://www.youtube.com/embed/Coz757qmKoI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </iframe>
+                <p>
+                    (video of LEDs are always pretty terrible, alas) In the videos, all the LEDs are the same color for
+                    each of the muffins, so you can see how the tints affect the apparent color. We are looking for a
+                    tint that makes the flowers look good (see the still image for the un-illuminated colors) but does
+                    not interfere with the hue projected by the LEDs. A few of these tints seem like good candidates.
+                </p>
+                <iframe width="100%" height="250em" src="https://www.youtube.com/embed/EESfywfdz0A"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -213,218 +232,203 @@
     <header>
         <!-- place navbar here -->
     </header>
-    <main class="bg-secondary">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">JOBI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projectDetails.html">Project Details</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="artists.html">Artists</a>
-                        </li>
-
-
-                    </ul>
+    
+    <div id="container">
+        <main class="bg-secondary">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">JOBI</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projectDetails.html">Project Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artists.html">Artists</a>
+                            </li>
+    
+    
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </main>
-    <div class="container text-center align-items-center" id="container">
-        <div class="row align-items-center" id="centerRow">
-            <div class="col align-items-center">
-                <h1>
-                    Blogs
-                </h1>
-                <div id="container">
+            </nav>
+        </main>
+    
+        <h1>
+            Click The Field!
+        </h1>
 
-                </div>
-                <div id="parent"class="card" style="width: 100%;">
-                    <script>
-                        const SCREEN_WIDTH = screen.width / 2.25
-                        const SCREEN_HEIGHT = screen.height / 2.25
-                    
-                        const NUM_FLOWERS = screen.height / 15;
-                        const WAVE_MAX_RADIUS = 1200;
-                        const WAVE_THICKNESS = 300;
-                        const WAVE_SPEED = 0.4; // pixels per millisecond
-                    
-                    
-                        var config = {
-                            type: Phaser.AUTO,
-                            width: SCREEN_WIDTH,
-                            height: SCREEN_HEIGHT,
-                            parent: "parent",
-                            physics: {
-                                default: 'arcade',
-                                arcade: {
-                                    //gravity: { y: 300 },
-                                    debug: false
-                                }
-                            },
-                            scene: {
-                                preload: preload,
-                                create: create,
-                                update: update
-                            }
-                        };
-                    
-                        // Todo
-                        //  set color of flowers using tint
-                        //    can get fancier by computing needed color for all four corners and setting those separetly
-                    
-                        // Visible objects
-                        var person;
-                        var graphics;
-                    
-                        var waves = new Set();
-                        var flowers = new Set();
-                    
-                        var game = new Phaser.Game(config);
-                    
-                        function preload ()
-                        {
-                            // TODO: add a dark deserty background
-                            this.load.image('flower1', 'images/daisy.png')
-                            this.load.image('flower2', 'images/crocus.png')
-                            this.load.image('flower3', 'images/buttercup.png')
-                            this.load.image('person', 'images/person.png')
+
+        <div id="parent" style="width: 100%;">
+            <script>
+                const SCREEN_WIDTH = 1200
+                const SCREEN_HEIGHT = 800
+
+                const NUM_FLOWERS = 150;
+                const WAVE_MAX_RADIUS = 1200;
+                const WAVE_THICKNESS = 300;
+                const WAVE_SPEED = 0.4; // pixels per millisecond
+
+
+                var config = {
+                    type: Phaser.AUTO,
+                    width: SCREEN_WIDTH,
+                    height: SCREEN_HEIGHT,
+                    parent: "parent",
+                    physics: {
+                        default: 'arcade',
+                        arcade: {
+                            //gravity: { y: 300 },
+                            debug: false
                         }
-                    
-                        function place_flowers (scene)
-                        {
-                            flower_image_handles = ['flower1', 'flower2', 'flower3']
-                            flower_locations = poisson_disc_sample(SCREEN_WIDTH, SCREEN_HEIGHT, NUM_FLOWERS);
-                            console.log("Selected " + flower_locations.length + " flower locations.");
-                            for (let i = 0; i < flower_locations.length; i++) {
-                              //var x = Math.random() * SCREEN_WIDTH;
-                              //var y = Math.random() * SCREEN_HEIGHT;
-                              let x = flower_locations[i].x;
-                              let y = flower_locations[i].y;
-                              let flower_type = flower_image_handles[Math.floor(Math.random() * flower_image_handles.length)];
-                              flower = scene.add.image(x, y, flower_type);
-                              flowers.add(flower)
-                            } 
+                    },
+                    scene: {
+                        preload: preload,
+                        create: create,
+                        update: update
+                    }
+                };
+
+                // Todo
+                //  set color of flowers using tint
+                //    can get fancier by computing needed color for all four corners and setting those separetly
+
+                // Visible objects
+                var person;
+                var graphics;
+
+                var waves = new Set();
+                var flowers = new Set();
+
+                var game = new Phaser.Game(config);
+
+                function preload() {
+                    // TODO: add a dark deserty background
+                    this.load.image('flower1', 'images/daisy.png')
+                    this.load.image('flower2', 'images/crocus.png')
+                    this.load.image('flower3', 'images/buttercup.png')
+                    this.load.image('person', 'images/person.png')
+                }
+
+                function place_flowers(scene) {
+                    flower_image_handles = ['flower1', 'flower2', 'flower3']
+                    flower_locations = poisson_disc_sample(SCREEN_WIDTH, SCREEN_HEIGHT, NUM_FLOWERS);
+                    console.log("Selected " + flower_locations.length + " flower locations.");
+                    for (let i = 0; i < flower_locations.length; i++) {
+                        //var x = Math.random() * SCREEN_WIDTH;
+                        //var y = Math.random() * SCREEN_HEIGHT;
+                        let x = flower_locations[i].x;
+                        let y = flower_locations[i].y;
+                        let flower_type = flower_image_handles[Math.floor(Math.random() * flower_image_handles.length)];
+                        flower = scene.add.image(x, y, flower_type);
+                        flowers.add(flower)
+                    }
+                }
+
+                function start_wave(context) {
+                    console.log('starting wave');
+                    var new_wave = {
+                        x: person.x,
+                        y: person.y,
+                        r: 0,
+                        hue: Math.random()
+                    }
+                    waves.add(new_wave)
+
+                    this.tweens.addCounter({
+                        from: 0,
+                        to: WAVE_MAX_RADIUS,
+                        duration: WAVE_MAX_RADIUS / WAVE_SPEED,  // milliseconds
+                        onUpdate: function (tween) {
+                            new_wave.r = tween.getValue();
+                        },
+                        onComplete: function (tween) {
+                            waves.delete(new_wave)
                         }
-                    
-                        function start_wave (context) 
-                        {
-                            console.log('starting wave');
-                            var new_wave = {
-                                x: person.x,
-                                y: person.y,
-                                r: 0,
-                                hue: Math.random()
-                            }
-                            waves.add(new_wave)
-                    
-                            this.tweens.addCounter({
-                                from: 0,
-                                to: WAVE_MAX_RADIUS,
-                                duration: WAVE_MAX_RADIUS / WAVE_SPEED,  // milliseconds
-                                onUpdate: function (tween)
-                                {
-                                    new_wave.r = tween.getValue();
-                                },
-                                onComplete: function (tween)
-                                {
-                                    waves.delete(new_wave)
-                                }
-                            });
-                        }
-                    
-                        function create ()
-                        {
-                            graphics = this.add.graphics();
-                    
-                            place_flowers(this);
-                            person = this.physics.add.sprite(200, 450, 'person');
-                            person.setCollideWorldBounds(true);
-                    
-                            this.input.on('pointermove', function (pointer) {
-                                person.x = pointer.x;
-                                person.y = pointer.y;
-                            });
-                    
-                            this.input.on('pointerdown', start_wave, this);
-                        }
-                    
-                        function update()
-                        {
-                            //draw_waves();
-                            flowers_react();
-                        }
-                    
-                        function draw_waves()
-                        {
-                            graphics.clear();
-                            graphics.lineStyle(WAVE_THICKNESS, 0xffffff);
-                            for (const wave of waves) {
-                                graphics.beginPath();
-                                graphics.arc(wave.x, wave.y, wave.r, Phaser.Math.DegToRad(0), Phaser.Math.DegToRad(360), false, 0.02);
-                                graphics.strokePath();
-                                graphics.closePath();
-                            }
-                        }
-                    
-                        function flowers_react()
-                        {
-                            for (const flower of flowers) {
-                                let min_distance_from_wave_ridge = SCREEN_WIDTH;
-                                let waves_this_flower_is_in = [];
-                                // TODO: make this some kind of functional list comprehension
-                                for (const wave of waves) {
-                                    let dist_from_wave_center = distance(flower, wave)
-                                    var dist_from_wave_ridge = Math.abs(dist_from_wave_center - wave.r);
-                                    if (dist_from_wave_ridge < WAVE_THICKNESS / 2) {
-                                        waves_this_flower_is_in.push(wave);
-                                        min_distance_from_wave_ridge = Math.min(
-                                            min_distance_from_wave_ridge, dist_from_wave_ridge);
-                                    }
-                                }
-                                if (waves_this_flower_is_in.length == 0) {
-                                    // flowers not in any wave are white.
-                                    flower.setTint(0xffffff)
-                                    continue
-                                }
-                                // Hue will be determined by combining hues for all waves this flower is in.
-                                let hue = null;
-                                if (waves_this_flower_is_in.length == 1) {
-                                    hue = waves_this_flower_is_in[0].hue;
-                                } else {
-                                    let wave_hues = waves_this_flower_is_in.map(wave => wave.hue);
-                                    hue = maximally_distant_hue(wave_hues);
-                                }
-                                // saturate according to distance from nearest wave ridge
-                                let sat = 1 - (min_distance_from_wave_ridge / (WAVE_THICKNESS / 2));
-                                let bri = 1.0;
-                                let color = new Phaser.Display.Color();
-                                color.setFromHSV(hue, sat, bri)
-                                flower.setTint(color.color);
+                    });
+                }
+
+                function create() {
+                    graphics = this.add.graphics();
+
+                    place_flowers(this);
+                    person = this.physics.add.sprite(200, 450, 'person');
+                    person.setCollideWorldBounds(true);
+
+                    this.input.on('pointermove', function (pointer) {
+                        person.x = pointer.x;
+                        person.y = pointer.y;
+                    });
+
+                    this.input.on('pointerdown', start_wave, this);
+                }
+
+                function update() {
+                    //draw_waves();
+                    flowers_react();
+                }
+
+                function draw_waves() {
+                    graphics.clear();
+                    graphics.lineStyle(WAVE_THICKNESS, 0xffffff);
+                    for (const wave of waves) {
+                        graphics.beginPath();
+                        graphics.arc(wave.x, wave.y, wave.r, Phaser.Math.DegToRad(0), Phaser.Math.DegToRad(360), false, 0.02);
+                        graphics.strokePath();
+                        graphics.closePath();
+                    }
+                }
+
+                function flowers_react() {
+                    for (const flower of flowers) {
+                        let min_distance_from_wave_ridge = SCREEN_WIDTH;
+                        let waves_this_flower_is_in = [];
+                        // TODO: make this some kind of functional list comprehension
+                        for (const wave of waves) {
+                            let dist_from_wave_center = distance(flower, wave)
+                            var dist_from_wave_ridge = Math.abs(dist_from_wave_center - wave.r);
+                            if (dist_from_wave_ridge < WAVE_THICKNESS / 2) {
+                                waves_this_flower_is_in.push(wave);
+                                min_distance_from_wave_ridge = Math.min(
+                                    min_distance_from_wave_ridge, dist_from_wave_ridge);
                             }
                         }
-                        </script>
-                </div>
-
-
-
-            </div>
-
+                        if (waves_this_flower_is_in.length == 0) {
+                            // flowers not in any wave are white.
+                            flower.setTint(0xffffff)
+                            continue
+                        }
+                        // Hue will be determined by combining hues for all waves this flower is in.
+                        let hue = null;
+                        if (waves_this_flower_is_in.length == 1) {
+                            hue = waves_this_flower_is_in[0].hue;
+                        } else {
+                            let wave_hues = waves_this_flower_is_in.map(wave => wave.hue);
+                            hue = maximally_distant_hue(wave_hues);
+                        }
+                        // saturate according to distance from nearest wave ridge
+                        let sat = 1 - (min_distance_from_wave_ridge / (WAVE_THICKNESS / 2));
+                        let bri = 1.0;
+                        let color = new Phaser.Display.Color();
+                        color.setFromHSV(hue, sat, bri)
+                        flower.setTint(color.color);
+                    }
+                }
+            </script>
         </div>
-
     </div>
+
+
 
 
 

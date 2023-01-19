@@ -103,6 +103,10 @@
             padding: 2em;
 
         }
+        h5{
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
 
         body::after {
             z-index: -1;
@@ -147,6 +151,9 @@
             font-size: 40px;
 
         }
+        #goto{
+            margin: 0;
+        }
         #demoModal{
             align-items: center;
             justify-content: center;
@@ -189,6 +196,7 @@
             width: 80%;
             padding: 0;
             }
+
         }
         @media screen and (max-width: 10069px) and (min-width: 1300px) {
             #centerRow {
@@ -211,6 +219,8 @@
         }
     
     </style>
+
+    
 <div id="centerHelper">
 <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -234,10 +244,10 @@
                         <div class="carousel-item active">
                             <div id="parent"class="card" style="width: 100%;">
                                 <script>
-                                    const SCREEN_WIDTH = screen.width / 2.25
-                                    const SCREEN_HEIGHT = screen.height / 2.25
+                                    const SCREEN_WIDTH = 1200
+                                    const SCREEN_HEIGHT = 800
                                 
-                                    const NUM_FLOWERS = screen.height / 15;
+                                    const NUM_FLOWERS = 150;
                                     const WAVE_MAX_RADIUS = 1200;
                                     const WAVE_THICKNESS = 300;
                                     const WAVE_SPEED = 0.4; // pixels per millisecond
@@ -552,8 +562,7 @@
                 <div id="demoCaptions" class="carousel carousel-dark" data-bs-ride="carousel"
                     data-bs-interval="1000000">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-toggle="modal"
-                        data-bs-target="#demoModal">
+                        <div class="carousel-item active" onclick="location.href='demo.html'">
                             <img src="demoImg.webp" class="d-block w-100" alt="field1.png">
                             <div class="carousel-caption d-flex d-md-block">
 
@@ -562,8 +571,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#demoModal" id="launch">Launch Demo</button>
+                <button class="btn btn-primary" onclick="location.href='demo.html'"id="launch">Launch Demo</button>
                 
 
                 <div id="carouselExampleCaptions" class="carousel carousel-dark" data-bs-ride="carousel"
@@ -657,6 +665,27 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                </div>
+                <div>
+                    <h1>Latest Blog Intro</h1>
+                    <div id="demoCaptions" class="carousel carousel-dark" data-bs-ride="carousel"
+                    data-bs-interval="1000000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-toggle="modal"
+                        data-bs-target="#demoModal">
+                        <h5 class="card-text">Jan 14th 2023</h5>
+                           <p>
+                            We've now made a few somewhat-interestingly shaped resin casts with LEDs in them (still the slow WS2812s...). We found for sale a silicone mold for pies that has a flower-like look. We used the same plywood jig trick to mount the LEDs in a spiral and set them in resin...
+                           </p>
+                            <div class="carousel-caption d-flex d-md-block">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="location.href='blog.html'" id='goto' >Go To Full Blog Post</button>
+                </div>
+
                 </div>
             </div>
 
