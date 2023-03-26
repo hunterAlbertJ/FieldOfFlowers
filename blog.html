@@ -182,10 +182,11 @@
             margin-top: 1em;
         }
     </style>
+  
 </head>
 
 <!-- Modal blog1-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Jan2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -543,6 +544,51 @@
         </div>
     </div>
 </div>
+<!-- Modal March 22-->
+<div class="modal fade" id="March22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #8</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    The LEDs are looking great!
+                </h3>
+                <p>
+                    We have our first real flower! Dan finished the first mold, we poured resin into it, we fit LEDs into the base, and we connected the LEDs to an ESP32 (the little computer that will drive each flower) using the new dimming software Jeff wrote for us. The flower is <u>gorgeous</u>.  
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/TGV2skgLCks"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+            
+                <p>
+                    In particular, I am absolutely amazed by how closely our artist's original drawings imagined the flowers we have now. The LEDs underneath the flower illuminate nearly the whole cast, so at low illumination, we get a sense of the flower as a shape. At full brightness, the flower becomes a blob of bright light. I'm enthralled watching the flower's shape appear and disappear as the luminosity increases and decreases. 
+
+                </p>
+        
+               <p>
+                Here are a few photos of the resin-cast flowers. These are just the first ones, the geraniums. Molds for the poppies and asters are coming soon. 
+               </p>
+               <p>
+                <img src="Mar22/IMG_2419 2.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+               </p>
+               <p>
+                <img src="Mar22/IMG_2425 3.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+               </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <body class="bg-secondary.bg-gradient ">
     <header>
@@ -586,8 +632,19 @@
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
+                        <img src="Mar22/IMG_2419 2.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">March 22nd 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#March22">
+                            First flower cast!
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
                         <img src="Mar19/LED.png" class="card-img-top" alt="https://via.placeholder.com/300">
-                        <h5 class="card-text">March 12th 2023</h5>
+                        <h5 class="card-text">March 19th 2023</h5>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#March19">
                             The LEDs are looking great 
@@ -660,7 +717,7 @@
 
                         <h5 class="card-text">Jan 2nd 2023</h5>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#Jan2">
                             First Day Of Casting
                         </button>
                     </div>
@@ -694,5 +751,9 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
 </body>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+<script src="modal.js" defer> </script>
 
 </html>
