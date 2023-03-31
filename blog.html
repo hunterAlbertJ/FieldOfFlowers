@@ -589,12 +589,48 @@
         </div>
     </div>
 </div>
+<!-- Modal Mar 28-->
+<div class="modal fade" id="Mar28" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #9</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Flower communication
+                </h3>
+                <p>
+                    We can now send commands over wifi from a computer to a flower to make it do things. The network communication happens while the LED continues to smoothly brighten and dim, without the LEDs glitching at all. 
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/sAa5_y_NWrg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+            
+                <p>
+                    The real magic here happens because we're using both of the cores in the ESP32 chip (like a CPU but not exactly). The LEDs are updating at around 300 frames per second, and at the same time, the flower is talking to the laptop without delays in either process. If you want to see how we're doing the code, check out our repository <a href="https://github.com/vm-wylbur-pi/fof_tests/tree/main/multicore/src" target="_blank"><em><u>here</u></em></a>
+                </p>
+                <p>
+                    Next up: make the ESP32 play audio while still running the LEDs and handling the networking. Very exciting progress.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Modal Mar 29-->
 <div class="modal fade" id="Mar29" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Blog #9</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Blog #10</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-block text-center">
@@ -668,6 +704,17 @@
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#Mar29">
                             Circuit board for flowers: nearly done
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Mar28/comms.jpg" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Mar 28th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Mar28">
+                            Flower communication
                         </button>
                     </div>
                 </div>
