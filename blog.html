@@ -589,6 +589,37 @@
         </div>
     </div>
 </div>
+<!-- Modal Mar 29-->
+<div class="modal fade" id="Mar29" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #9</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Circuit board for flowers: nearly done
+                </h3>
+                <p>
+                    We're working with <a href="https://www.makerfabs.com/" target="_blank"><em><u>Makerfabs</u></em></a> for our ESP32 and audio amplifier electronics. They have a really nice and inexpensive <a href="https://www.makerfabs.com/makepython-esp32.html" target="_blank"><em><u>ESP32 board</u></em></a> that even has a little display (we're using the WROVER-B version that has 8MB PSRAM and 16MB flash memory). We're also using their <a href="https://www.makerfabs.com/makepython-audio.html" target="_blank"><em><u>Audio expansion board</u></em></a> that connects to this ESP32, but we're modifying it for our needs. Makerfabs has a PCB design service, and they're helping us adapt their board. 
+                </p>
+                <p>
+                    The diagram below shows what our modified board will look like. We're adding a <a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/" target="_blank"><em><u>level shifter</u></em></a> chip (we're trying a <a href="https://www.diodes.com/assets/Datasheets/74LVC1T45.pdf" target="_blank"><em><u>74LVC1T45W6-7</u></em></a>), a USB-C input to route 5v power from the battery to the whole flower, and jacks for speaker output and power+data to the LEDs. 
+                </p>
+                <p>
+                    <img src="Mar29/Catch.jpg" class="card-img-top" alt="https://via.placeholder.com/300">
+
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <body class="bg-secondary.bg-gradient ">
     <header>
@@ -629,6 +660,17 @@
                 <h1>
                     Blogs
                 </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Mar29/Catch.jpg" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Mar 29th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Mar29">
+                            Circuit board for flowers: nearly done
+                        </button>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
