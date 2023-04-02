@@ -656,6 +656,89 @@
         </div>
     </div>
 </div>
+<!-- Modal Apr 1st-->
+<div class="modal fade" id="Apr1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #11</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Warped Perspectives
+                </h3>
+                <p>
+                    One of the first challenges in the computer vision side of this project is to take an image shot from an angle and convert it into a flat plane.  This is critical to determine the locations of the flowers and the locations of people moving around them.
+                </p>
+                <p>
+                    Fortunately, some excellent software tools exist to do just that
+                </p>
+                <p>
+                    To figure out how to use them we built a scale replica of the field which we've been referring to as Lego Playa, where each 1 cm square on the paper = 1 ft in the real world (metric, imperial, why not both!).  The darker squares on the corners are used for triangulation and the square + dot in the middle is our center-point target.
+
+                </p>
+                <p>
+                    In the left picture, shot at an angle, our Lego Playa looks like a lop-sided diamond. On the right the image has been run through our program to warp the perspective into a super-convenient, uniform square.  The red dot in the center(ish) of the target at 50 x 50 means that our program's idea of center matches the real world's idea of center.
+                </p>
+                <p>
+                    <img src="Apr1/live.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr1/code.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+
+                </p>
+                <p>
+                    As a bonus, we can use the same perspective transformation to plot the locations of people on the field once we've got a way to spot them in the image.  More on that soon.
+                </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 2nd-->
+<div class="modal fade" id="Apr2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #12</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Computer Vision
+                </h3>
+                <p>
+                    The second challenge in the computer vision side of the project is spotting people as they walk through the field.  As with the perspective warping there are some awesome tools out there that are built to do exactly that.
+                </p>
+                <p>
+                    In the image above, we successfully spot the lego character on our Lego Playa, and detect the point on the playa (red dot) where they're standing.
+                </p>
+                <p>
+                    Between this, and the warped perspective function we used to convert the lop-sided view to a nice grid, we've laid the (ahem) groundwork to determine the locations of people in the field from a camera mounted on a pole next to the field.
+
+                </p>
+                <p>
+                    Next up will be to do it on video and track their paths through the flowers.
+                </p>
+                <p>
+                    <img src="Apr2/vision.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <body class="bg-secondary.bg-gradient ">
     <header>
@@ -696,6 +779,28 @@
                 <h1>
                     Blogs
                 </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr2/vision.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 2nd 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr2">
+                            Computer Vision
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr1/live.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 1th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr1">
+                            Warped Perspectives
+                        </button>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
@@ -811,23 +916,9 @@
                         </button>
                     </div>
                 </div>
-                
-
-
-
-
-
-
             </div>
-
         </div>
-
     </div>
-
-
-
-
-
     <footer>
         <!-- place footer here -->
     </footer>
