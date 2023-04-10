@@ -738,6 +738,90 @@
         </div>
     </div>
 </div>
+<!-- Modal Apr 7th-->
+<div class="modal fade" id="Apr7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #13</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Synchrony
+                </h3>
+                <p>
+                    How do we get all the flowers to create light and sound at the same time? This problem is called synchrony. We manage it by having all the little computers in the flowers (called <a href="https://www.makerfabs.com/makepython-esp32.html" target="_blank"><em><u>ESP32s</u></em></a>) to share a <a href="https://github.com/vm-wylbur-pi/fof_tests/tree/main/multicore/lib/NTPClient" target="_blank"><em><u>very precise clock</u></em></a>. Once they're all on the beat, we can tell them to go at the same time.
+                </p>
+                <p>
+                    Here's a video showing that even without really fancy software, we can create LED blinks within about 50 milliseconds of one another. That's good, but of course we'll keep making it tighter. 
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/sCnEVj8VNEE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+       
+                <p>
+                    Audio is a lot more complicated. We need all the little songs to play on the beat, so we need the flowers to keep a beat that we can use to initiate audio playback in a consistent way. Audio does not play back immediately when we send the command to the ESP32s because we have to read the song file from the flash memory, so there's a little bit of latency. We want to use the latency to get all the ESP32s to start on the same downbeat. A lot more more on this coming soon. 
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 9th-->
+<div class="modal fade" id="Apr9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #13</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Beginning production 
+                </h3>
+                <p>
+                    This week we've focused on building more flower and leave masters+molds and thinking about how we'll make the stalks. 
+                </p>
+                <p>
+                    Dan made huge progress with molds. The leaves are going to seat perfectly against the stalks. They will bolt to the stalks with a threaded insert, like the flowers, and they'll hold the LED strands in channels, also like the flowers.
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2669.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2670.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2671.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2679.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2680.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+       
+                <p>
+                    We've also got masters, molds, and first casts for the asters. These are looking terrific! The illumination is diffusing beautifully in this one. 
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2681.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <body class="bg-secondary.bg-gradient ">
@@ -779,6 +863,28 @@
                 <h1>
                     Blogs
                 </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr9/IMG_2670.jpeg" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 7th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr9">
+                            Beginning production 
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="April7/Synchrony.png" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 7th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr7">
+                            Synchrony
+                        </button>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
