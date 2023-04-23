@@ -900,6 +900,46 @@
     </div>
 </div>
 
+<!-- Modal Apr 19th-->
+<div class="modal fade" id="Apr19" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #16</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Testing our new PCB
+                </h3>
+                <p>
+                    A few weeks ago I wrote about our <a href="https://www.campjobi.com/blog.html#Mar29" target="_blank"><em><u>custom printed circuit boards (PCB)</u></em></a> designed and manufactured by <a href="https://www.makerfabs.com/" target="_blank"><em><u>Makerfabs</u></em></a>. The first samples arrived, and I've started testing them. 
+                </p>
+                
+                <p>
+                    The custom boards are a modification of Makerfabs's <a href="https://www.makerfabs.com/makepython-audio.html" target="_blank"><em><u>audio expansion board</u></em></a>. The modified PBC includes a jack for power into USB-c that will power all the LEDs; a <a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/" target="_blank"><em><u>level shifter chip</u></em></a>.; and an amplifier (the <a href="https://www.adafruit.com/product/3006" target="_blank"><em><u>MAX98357A</u></em></a>). It also includes an output jack for data and power to the LEDs.
+                </p>
+                <p>
+                    First I put the board on the multimeter and the osilloscope (see photo). The multimeter confirms that the board is passing power directly from the battery through USB-c to the +5v/GND leads to power the LEDs. This is good, the same voltage from the battery is coming across the cable to the LEDs, no voltage drop, so there's a clean power plane in the PCB. 
+                </p>
+             
+                <p>
+                    <img src="April19/IMG_2541.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    Then I put the data lead thru the oscilloscope to check that the level shifter is doing its job: if the level shifter weren't working, we'd see the peaks of the data high signal at 3.3v, which is the voltage that comes out of the ESP32. However, we correctly see a nice steady 5v for high (ok there's a little bounce, don't worry about that, the ESP32 isn't all that crisp at 1MHz). Check: we don't need to worry about the <a href="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" target="_blank"><em><u>WS2812b</u></em></a> chips in the LEDs losing track of the signal. 
+                </p>
+                <p>
+                    Note that the oscope shows that data is flowing at about 1MHz. That's just about right for the WS2812b's max 800kbs. So I think that's good too. Great stuff: next up is a test of the wifi and how the boards coordinate with the server software we're developing. 
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <body class="bg-secondary.bg-gradient ">
     <header>
@@ -940,6 +980,17 @@
                 <h1>
                     Blogs
                 </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="April19/IMG_2541.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 19th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr19">
+                            Testing our new PCB
+                        </button>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
