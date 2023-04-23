@@ -941,6 +941,53 @@
     </div>
 </div>
 
+<!-- Modal Apr 20th-->
+<div class="modal fade" id="Apr20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #17</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Testing flower communication 
+                </h3>
+                <p>
+                    The flowers talk to each other and to a server over wifi. We need to start testing how well the wifi works, and to look for bugs in our communications software. So we assembled a few test flowers with the new custom PCBs and Makerfabs's ESP-32, along with a speaker and LEDs in prototype flowers (and LED loops to simulate the leaves).
+                </p>
+                
+                <p>
+                    <img src="April20/IMG_2545.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    Next I moved the flowers out 50', 75', and 100' from the router. 
+                </p>
+             
+                <p>
+                    <img src="April20/FoF-distance-test-20230416.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    The point is to measure the wifi signal strength and make sure we can tell the flowers to do stuff from the server. I've got my <a href="https://system76.com/desktops/meerkat" target="_blank"><em><u>shop server</u></em></a> running NTP and <a href="https://mosquitto.org/" target="_blank"><em><u>mosquitto</u></em></a>. (which was slightly more trouble than I expected bc <a href="https://www.apparmor.net/" target="_blank"><em><u> security I didn't know my vender included</u></em></a> kept blocking them). Here's what the <a href="https://github.com/vm-wylbur-pi/fof_tests/tree/main/flower_control_center" target="_blank"><em><u>flower-control-center</u></em></a> looks like (omg I ❤❤❤ the flower control center!):
+                </p>
+                <p>
+                    <img src="April20/flower-control-distance-test-20230416.png" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    The signal strength drops with distance, of course: 50' is totally fine (-45dbm), 75' is weak (-64dbm), and 100' is marginal (-75dbm). I moved the flowers around some, and this result is consistent. While I say "marginal," I was able to send a "playAudio" command to the farthest flower with no trouble (the cheapie bluetooth speakers are *plenty* loud, we're going to have to figure out how to configure them to standard volume on the speaker side). However, I note that the signal that far out is only -75dbm, and we could have dropouts for the flowers far side of the garden on the far side of the router.
+                </p>
+                <p>
+                    If we're worried about signal strength (maybe?), I wonder if we want to put a "beehive" or something in the middle of the field for the router? That would mean a max of ~50' from router to all the flowers, thereby keeping all the flowers at good signal strength? The downside would be that we'd probably want to trench from the flagpole/bird/camera to the router to run an ethernet cable so we get zero dropouts between RPi controller+camera and the router. Anyway, that's a design problem we will keep thinking about. 
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <body class="bg-secondary.bg-gradient ">
     <header>
         <!-- place navbar here -->
@@ -980,6 +1027,17 @@
                 <h1>
                     Blogs
                 </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="April20/IMG_2545.JPG" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 20th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr20">
+                            Testing flower communication 
+                        </button>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%;">
                    
                     <div class="card-body">
