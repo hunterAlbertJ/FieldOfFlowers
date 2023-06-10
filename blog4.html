@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JOBI</title>
+    <!-- Required meta tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+
+
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:visited{
+            background-color: rgb(45, 57, 119) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+
+        }
+        
+        .btn-secondary{
+            background-color: rgb(73, 93, 195) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+        }
+
+        body {
+            background-image: url("flowerPattern 2.jpeg");
+            /* background: rgba(0, 0, 0, 0); */
+
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+
+        }
+        #page{
+            padding-top: 1.5em;
+        }
+
+        #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: auto;
+            padding: 0;
+        }
+
+        @media all and(min-width: 576px) {
+            #centerRow {
+                width: auto;
+            }
+        }
+
+        @media all and(min-width: 768px) {
+            #centerRow {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+                width: 80%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+                width: 80%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+                width: 60%;
+                padding: 0;
+            }
+
+            /* your code here */
+        }
+
+        #titleBanner {
+            margin-top: .5em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        li>a {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        .modal-title {
+            font-size: 2em;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        h5 {
+
+            border-radius: .2em;
+            margin-top: .25em;
+        }
+
+        p {
+            padding: .2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+
+            background-color: white;
+        }
+
+        .col {
+            background-color: rgb(175, 211, 223);
+            padding: 2em;
+
+        }
+
+        .card {
+            margin-bottom: 2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+        }
+
+        .card-title {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+
+        .card-text {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+
+        a {
+            color: rgb(45, 57, 119);
+        }
+
+        #secondImg {
+            margin-top: 1em;
+        }
+    </style>
+  
+</head>
+
+<!-- Modal June6th-->
+<div class="modal fade" id="June6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #22</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Birdhouses in production 
+                </h3>
+            
+                
+                <p>
+                    In every big project I've been part of, the part that ends up taking the most time is rarely the most technically complicated, nor the part that the original design focused on. For the Field of Flowers, we've ended up spending over a month building the enclosures: these are little wooden boxes at the base of each flower that hold the battery, speaker, and electronics. 
+                </p>
+                <p>
+                    First we cut the sides and the base. 
+                </p>
+                <p>
+                    <img src="June6/boards.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="June6/saw.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="June6/people.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    Then we had to cut nice looking holes in the sides (and later, the tops and back) so that the sound from the speakers can get out. We wanted nice looking holes (vaguely flower-like) so we used a technique called template routing. 
+
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube-nocookie.com/embed/iBbreGZoRXQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+                <p>
+                    Cutting around 380 of these holes (we made a lot of mistakes) left a ton of interestingly-shaped little offcut pieces. 
+                </p>
+                <p>
+                    <img src="June6/pile.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    I built jigs to help us assemble the components into approximately square birdhouses. 
+                </p>
+                <p>
+                    <img src="June6/person.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    After a lot more drilling, we have 165 birdhouses on stalks.  
+                </p>
+                <p>
+                    <img src="June6/stalks.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    There are a couple of interesting assembly steps here. First, drilling the holes for the tops is challenging because every stalk+birdhouse combination is unique because (of course) the stalks are curvy. Then, if you look closely, you can see there's a little bolt in the top that secures the top to the rest of the birdhouse (keeping the stuff inside safe). The placement of this hole is unique to each flower. Whew! 
+
+                </p>
+                <p>
+                    Today! we finished drilling the stalks and affixing the birdhouses to stalks. We have 165 ready for electronics, leaves+flowers, battery, and speaker. Next up: flower assembly. 
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal June7th-->
+<div class="modal fade" id="June7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #23</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Templates and jigs and scraps
+                </h3>
+            
+                
+                <p>
+                    I built a lot of templates and jigs so that our cutting and assembly is (approximately) consistent. <a href="blog4.html#June6" target="_blank"><em><u>We posted a video </u></em></a>about how we did the template routing. This is the method we used to cut holes in the side panels. This method worked really well. We used two routers, each with a flush trim bit. The bearing on the bit tracked the template, which enabled us to reproduce the cuts in the template. We sure did cut a lot of those side panels.
+                </p>
+               
+                <p>
+                    <img src="June7/stacked.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    I also built jigs to hold the parts for the birdhouse assembly. 
+                </p>
+                <p>
+                    <img src="June7/drills.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="June7/twoPeople.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    All this woodworking has left us with a LOT of scrap. 
+
+                </p>
+                <p>
+                    <img src="June7/truck.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    But now we have the physical fabrication done! 
+                </p>
+                <p>
+                    <img src="June7/stalks.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    I built jigs to help us assemble the components into approximately square birdhouses. 
+                </p>
+                <p>
+                    <img src="June6/person.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    After a lot more drilling, we have 165 birdhouses on stalks.  
+                </p>
+                <p>
+                    <img src="June6/stalks.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    For the next month, we will be casting leaves and flowers in resin, gluing LEDs into leaves and flowers, and assembling the flowers. This is the fun part, and so far, we've got 18 flowers completely done. Software development is going quickly now. Whew! Here we go. 
+
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal June8th-->
+<div class="modal fade" id="June8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #24</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Flower Electronics
+                </h3>
+            
+                
+                <p>
+                    We have had very good luck --- and good partnerships --- buying electronics directly from companies in China.
+                </p>
+               
+                <p>
+                    We started with the ESP32 boards and their accompanying audio+LED+power board. We got the boards from <a href="https://www.makerfabs.com/" target="_blank"><em><u>Makerfabs</u></em></a> in Shenzhen, and I could not be happier. Their <a href="https://www.makerfabs.com/makepython-esp32.html" target="_blank"><em><u>ESP32 boards</u></em></a>
+                    are terrific and inexpensive (we paid about half of the listed price for 165 boards). Even more importantly, they helped us design a board that could output audio through a 3.5mm aux jack; include a <a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/" target="_blank"><em><u>level-shifter for the LEDs</u></em></a> (because the ESP32 outputs 3.3v signals but the LEDs require a 5v signal, we used <a href="https://www.digikey.com/en/products/detail/diodes-incorporated/74LVC1T45W6-7/5427267" target="_blank"><em><u>this chip</u></em></a>); and we made a power plane so the +5v and GND from the battery have a clear path to the LEDs without going through the ESP32's power management. 
+                </p>
+                <p>
+                    This process went almost flawlessly. Makerfabs's engineer helped me think through the design, and we got the samples quickly. The samples output sound through a tiny JST connector, not an aux cable, and the sound was ok. Then the production boards arrived.
+                </p>
+                <p>
+                    <img src="June8/boards.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    There was no audio from speakers attached through an aux cable! Well, there was a tiny echo of sound in the speaker, but no more than that. After a LOT of thinking about the schematic, by accident, I noticed that if I pulled the jack halfway out, the sound was fine. What? 
+                </p>
+                <p>
+                    Turns out that the tiny amplifier chip outputs only one channel. To get two channels (for the stereo aux cable), the engineer routed sound to both. However, one channel was inverted, so they were canceling each other out. I figured out we can fix it by cutting one channel. We could cut the cables, but instead, we decided to desolder a tiny resistor (R39, in case you wanted to know) from each board. 
+
+                </p>
+                <p>
+                    <img src="June8/board.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    For perspective, this resistor is about 1.5mm long, the size of a deer tick (not a dog tick, that would be easy, no, a deer tick nymph; my choice of analogy may tell you how I feel about R39). Anyway, this doesn't take very long, and I've done 50 of the boards so far. Success!
+                </p>
+                <p>
+                    The LEDs were simpler and had a similarly fantastic result. For over 10 years, I've bought strands of LEDs and cut them to the length I want, resoldering the leads onto the pads. This time is a little bit more complicated because we're buying the LED strands (just standard WS2812B LEDs but in the 2mm size) encased in a sheath that diffuses the light (called "neon" but it has nothing to do with the noble gas). I found a company in Hong Kong called <a href="https://alitove.net/" target="_blank"><em><u>Alitove Lighting </u></em></a>  that had great prices. After some discussion, they recommended that they cut and solder all the strands. What a game changer! 
+                </p>
+                <p>
+                    <img src="June8/wires.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+            
+                <p>
+                    <img src="June8/piles.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    This vastly reduces the amount of soldering we have to do, and furthermore, Alitove's strands have protective caps on each end which will reduce the possibility that we'll damage the LED strands while we're gluing them into leaves and flowers. Alitove accommodated my specification for the orientation of the JST leads (I prefer the male-female orientation of the leads in the opposite direction relative to their standard).The price was great and the shipping was ridiculously fast. Yay!
+                </p>
+              
+                <p>
+                    We bought other stuff -- cheap bluetooth speakers, misc cables -- from vendors at Aliexpress. The cables hit some shipping problems (not the vendor's fault! Argh, DHL sucks) and the vendor worked really well with me to get it sorted out. On the whole, I am very impressed with the standard of business I found with these four companies. I'll definitely start here next time I have a big project. 
+
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<body class="bg-secondary.bg-gradient ">
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">JOBI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projectDetails.html">Project Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artists.html">Artists</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <div class="container text-center align-items-center" id="container">
+        <div class="row align-items-center" id="centerRow">
+            <div class="col align-items-center">
+                <h1>
+                    Blogs
+                </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div id="page">
+                        <button class="btn btn-primary" onclick="location.href='blog.html'" id="launch">1</button>
+                        <button class="btn btn-primary" onclick="location.href='blog2.html'" id="launch">2</button>
+                        <button class="btn btn-primary" onclick="location.href='blog3.html'" id="launch">3 </button>
+                        <button class="btn btn-secondary" onclick="location.href='blog4.html'" id="launch">4 </button>
+                        </div>
+                  
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="June8/board.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">June 8th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#June8">
+                            Flower Electronics
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="June7/twoPeople.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">June 7th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#June7">
+                            Templates and jigs and scraps
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="June6/people.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">June 6th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#June6">
+                            Birdhouses in production 
+                        </button>
+                    </div>
+                </div>
+            
+               
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+<script src="modal.js" defer> </script>
+
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JOBI</title>
+    <!-- Required meta tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+
+
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:visited{
+            background-color: rgb(45, 57, 119) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+
+        }
+        
+        .btn-secondary{
+            background-color: rgb(73, 93, 195) !important;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+            margin-bottom: 1em;
+            font-family: 'Amatic SC', bold;
+            font-size: 1.5em;
+        }
+
+        body {
+            background-image: url("flowerPattern 2.jpeg");
+            /* background: rgba(0, 0, 0, 0); */
+
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.6);
+
+        }
+        #page{
+            padding-top: 1.5em;
+        }
+
+        #centerRow {
+            margin: auto;
+        }
+
+        #centerRow {
+            width: auto;
+            padding: 0;
+        }
+
+        @media all and(min-width: 576px) {
+            #centerRow {
+                width: auto;
+            }
+        }
+
+        @media all and(min-width: 768px) {
+            #centerRow {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 999px) and (min-width: 769px) {
+            #centerRow {
+                width: 80%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 1299px) and (min-width: 1000px) {
+            #centerRow {
+                width: 80%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 10069px) and (min-width: 1300px) {
+            #centerRow {
+                width: 60%;
+                padding: 0;
+            }
+
+            /* your code here */
+        }
+
+        #titleBanner {
+            margin-top: .5em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        li>a {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em !important;
+        }
+
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            background-color: rgb(45, 57, 119);
+            border-radius: .2em;
+        }
+
+        .modal-title {
+            font-size: 2em;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        h5 {
+
+            border-radius: .2em;
+            margin-top: .25em;
+        }
+
+        p {
+            padding: .2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+
+            background-color: white;
+        }
+
+        .col {
+            background-color: rgb(175, 211, 223);
+            padding: 2em;
+
+        }
+
+        .card {
+            margin-bottom: 2em;
+            border: 1px solid black;
+            border-radius: .2em;
+            box-shadow: 0 .2em .5em 0 rgba(45, 57, 119, 0.4);
+        }
+
+        .card-title {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+
+        .card-text {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+        }
+
+        a {
+            color: rgb(45, 57, 119);
+        }
+
+        #secondImg {
+            margin-top: 1em;
+        }
+    </style>
+  
+</head>
+
+
+<!-- Modal Mar 21-->
+<div class="modal fade" id="Mar21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #8</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    The LEDs are looking great!
+                </h3>
+                <p>
+                    We have our first real flower! Dan finished the first mold, we poured resin into it, we fit LEDs into the base, and we connected the LEDs to an ESP32 (the little computer that will drive each flower) using the new dimming software Jeff wrote for us. The flower is <u>gorgeous</u>.  
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/TGV2skgLCks"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+            
+                <p>
+                    In particular, I am absolutely amazed by how closely our artist's original drawings imagined the flowers we have now. The LEDs underneath the flower illuminate nearly the whole cast, so at low illumination, we get a sense of the flower as a shape. At full brightness, the flower becomes a blob of bright light. I'm enthralled watching the flower's shape appear and disappear as the luminosity increases and decreases. 
+
+                </p>
+        
+               <p>
+                Here are a few photos of the resin-cast flowers. These are just the first ones, the geraniums. Molds for the poppies and asters are coming soon. 
+               </p>
+               <p>
+                <img src="Mar22/IMG_2419 2.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+               </p>
+               <p>
+                <img src="Mar22/IMG_2425 3.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+               </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Mar 28-->
+<div class="modal fade" id="Mar28" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #9</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Flower communication
+                </h3>
+                <p>
+                    We can now send commands over wifi from a computer to a flower to make it do things. The network communication happens while the LED continues to smoothly brighten and dim, without the LEDs glitching at all. 
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/sAa5_y_NWrg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+            
+                <p>
+                    The real magic here happens because we're using both of the cores in the ESP32 chip (like a CPU but not exactly). The LEDs are updating at around 300 frames per second, and at the same time, the flower is talking to the laptop without delays in either process. If you want to see how we're doing the code, check out our repository <a href="https://github.com/vm-wylbur-pi/fof_tests/tree/main/multicore/src" target="_blank"><em><u>here</u></em></a>
+                </p>
+                <p>
+                    Next up: make the ESP32 play audio while still running the LEDs and handling the networking. Very exciting progress.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Mar 29-->
+<div class="modal fade" id="Mar29" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #10</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Circuit board for flowers: nearly done
+                </h3>
+                <p>
+                    We're working with <a href="https://www.makerfabs.com/" target="_blank"><em><u>Makerfabs</u></em></a> for our ESP32 and audio amplifier electronics. They have a really nice and inexpensive <a href="https://www.makerfabs.com/makepython-esp32.html" target="_blank"><em><u>ESP32 board</u></em></a> that even has a little display (we're using the WROVER-B version that has 8MB PSRAM and 16MB flash memory). We're also using their <a href="https://www.makerfabs.com/makepython-audio.html" target="_blank"><em><u>Audio expansion board</u></em></a> that connects to this ESP32, but we're modifying it for our needs. Makerfabs has a PCB design service, and they're helping us adapt their board. 
+                </p>
+                <p>
+                    The diagram below shows what our modified board will look like. We're adding a <a href="https://electricfiredesign.com/2021/03/12/logic-level-shifters-for-driving-led-strips/" target="_blank"><em><u>level shifter</u></em></a> chip (we're trying a <a href="https://www.diodes.com/assets/Datasheets/74LVC1T45.pdf" target="_blank"><em><u>74LVC1T45W6-7</u></em></a>), a USB-C input to route 5v power from the battery to the whole flower, and jacks for speaker output and power+data to the LEDs. 
+                </p>
+                <p>
+                    <img src="Mar29/Catch.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 1st-->
+<div class="modal fade" id="Apr1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #11</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Warped Perspectives
+                </h3>
+                <p>
+                    One of the first challenges in the computer vision side of this project is to take an image shot from an angle and convert it into a flat plane.  This is critical to determine the locations of the flowers and the locations of people moving around them.
+                </p>
+                <p>
+                    Fortunately, some excellent software tools exist to do just that
+                </p>
+                <p>
+                    To figure out how to use them we built a scale replica of the field which we've been referring to as Lego Playa, where each 1 cm square on the paper = 1 ft in the real world (metric, imperial, why not both!).  The darker squares on the corners are used for triangulation and the square + dot in the middle is our center-point target.
+
+                </p>
+                <p>
+                    In the left picture, shot at an angle, our Lego Playa looks like a lop-sided diamond. On the right the image has been run through our program to warp the perspective into a super-convenient, uniform square.  The red dot in the center(ish) of the target at 50 x 50 means that our program's idea of center matches the real world's idea of center.
+                </p>
+                <p>
+                    <img src="Apr1/live.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr1/code.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+
+                </p>
+                <p>
+                    As a bonus, we can use the same perspective transformation to plot the locations of people on the field once we've got a way to spot them in the image.  More on that soon.
+                </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 2nd-->
+<div class="modal fade" id="Apr2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #12</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Computer Vision
+                </h3>
+                <p>
+                    The second challenge in the computer vision side of the project is spotting people as they walk through the field.  As with the perspective warping there are some awesome tools out there that are built to do exactly that.
+                </p>
+                <p>
+                    In the image above, we successfully spot the lego character on our Lego Playa, and detect the point on the playa (red dot) where they're standing.
+                </p>
+                <p>
+                    Between this, and the warped perspective function we used to convert the lop-sided view to a nice grid, we've laid the (ahem) groundwork to determine the locations of people in the field from a camera mounted on a pole next to the field.
+
+                </p>
+                <p>
+                    Next up will be to do it on video and track their paths through the flowers.
+                </p>
+                <p>
+                    <img src="Apr2/vision.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 7th-->
+<div class="modal fade" id="Apr7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #13</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Synchrony
+                </h3>
+                <p>
+                    How do we get all the flowers to create light and sound at the same time? This problem is called synchrony. We manage it by having all the little computers in the flowers (called <a href="https://www.makerfabs.com/makepython-esp32.html" target="_blank"><em><u>ESP32s</u></em></a>) to share a <a href="https://github.com/vm-wylbur-pi/fof_tests/tree/main/multicore/lib/NTPClient" target="_blank"><em><u>very precise clock</u></em></a>. Once they're all on the beat, we can tell them to go at the same time.
+                </p>
+                <p>
+                    Here's a video showing that even without really fancy software, we can create LED blinks within about 50 milliseconds of one another. That's good, but of course we'll keep making it tighter. 
+                </p>
+                <p>
+                    <iframe width="100%" height="250em" src="https://www.youtube.com/embed/sCnEVj8VNEE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </p>
+       
+                <p>
+                    Audio is a lot more complicated. We need all the little songs to play on the beat, so we need the flowers to keep a beat that we can use to initiate audio playback in a consistent way. Audio does not play back immediately when we send the command to the ESP32s because we have to read the song file from the flash memory, so there's a little bit of latency. We want to use the latency to get all the ESP32s to start on the same downbeat. A lot more more on this coming soon. 
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 9th-->
+<div class="modal fade" id="Apr9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #14</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Beginning Production 
+                </h3>
+                <p>
+                    This week we've focused on building more flower and leave masters+molds and thinking about how we'll make the stalks. 
+                </p>
+                <p>
+                    Dan made huge progress with molds. The leaves are going to seat perfectly against the stalks. They will bolt to the stalks with a threaded insert, like the flowers, and they'll hold the LED strands in channels, also like the flowers.
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2669.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2670.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2671.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2679.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2680.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+       
+                <p>
+                    We've also got masters, molds, and first casts for the asters. These are looking terrific! The illumination is diffusing beautifully in this one. 
+                </p>
+                <p>
+                    <img src="Apr9/IMG_2681.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                    <p>
+                        <iframe width="100%" height="250em" src="https://www.youtube.com/embed/Jg9NS_VuPnY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 11th-->
+<div class="modal fade" id="Apr11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #15</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Stems and Caps
+                </h3>
+                <p>
+                    Flowers do not grow straight up and down. Their stems are a little bit curvy. That means we need to tweak the PVC pipes we're using as stems to looks a little less mechanical. The best way we've found is to use <a href="https://www.youtube.com/watch?v=mlKZwFw_MaY" target="_blank"><em><u>to use hot sand to warm the pipe</u></em></a>, then fit it into a form. Our first attempts look like this (thanks to our campmate Desert who is handling the PVC forming!). 
+                </p>
+                
+                <p>
+                    <img src="Apr11/bends.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+                <p>
+                    We'll next paint the PVC and drill holes for the leaves and electronics. PVC takes paint ok as long as you prime it. 
+                </p>
+                <p>
+                    We've learned about painting PVC as we've been preparing the top caps. These have a hole through which a bolt connects the cap to the bottom of the flower (there's a 3/8" threaded insert set into the resin for each flower to take the bolt). 
+                </p>
+                <p>
+                    Nearly done! Soon we'll tell you how the flowers will stand up and attach to the playa surface. 
+                </p>
+             
+                <p>
+                    <img src="Apr11/caps.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Apr 17th-->
+<div class="modal fade" id="Apr17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Blog #16</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-block text-center">
+                <h3>
+                    Lego People
+                </h3>
+                <p>
+                    I see you lego people, walking all around the lego playa, bumping into each other and carrying on....and now the camera can see you too!
+                </p>
+                
+                <p>
+                    While there's plenty of tweaking to do on the object detection model to narrow in on people, we can now track the movement of people-like objects across a white playa-like ground plane.  This, combined with our previous wins on warping perspective give us what we need to begin tracking XY coordinates of humans in the real world.
+                </p>
+             
+                <p>
+                    <img src="April17/lego-playa.gif" class="card-img-top" alt="https://via.placeholder.com/300">
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<body class="bg-secondary.bg-gradient ">
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">JOBI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projectDetails.html">Project Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artists.html">Artists</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <div class="container text-center align-items-center" id="container">
+        <div class="row align-items-center" id="centerRow">
+            <div class="col align-items-center">
+                <h1>
+                    Blogs
+                </h1>
+                <div class="card" style="width: 100%;">
+                   
+                    <div id="page">
+                        <button class="btn btn-primary" onclick="location.href='blog.html'" id="launch">1</button>
+                        <button class="btn btn-secondary" onclick="location.href='blog2.html'"id="launch">2</button>
+                        <button class="btn btn-primary" onclick="location.href='blog3.html'" id="launch">3 </button>
+                        <button class="btn btn-primary" onclick="location.href='blog4.html'" id="launch">4 </button>
+                        </div>
+                  
+                </div>
+            
+               
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="April17/lego-playa.gif" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 17th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr17">
+                            Lego People 
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr11/bends.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 11th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr11">
+                            Stems and Caps 
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr9/IMG_2670.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 7th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr9">
+                            Beginning production 
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="April7/Synchrony.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 7th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr7">
+                            Synchrony
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr2/vision.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 2nd 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr2">
+                            Computer Vision
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Apr1/live.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Apr 1th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Apr1">
+                            Warped Perspectives
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Mar29/Catch.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Mar 29th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Mar29">
+                            Circuit board for flowers: nearly done
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Mar28/comms.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Mar 28th 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Mar28">
+                            Flower communication
+                        </button>
+                    </div>
+                </div>
+                <div class="card" style="width: 100%;">
+                   
+                    <div class="card-body">
+                        <img src="Mar22/IMG_2419 2.webp" class="card-img-top" alt="https://via.placeholder.com/300">
+                        <h5 class="card-text">Mar 21st 2023</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#Mar21">
+                            First flower cast!
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+<script src="modal.js" defer> </script>
+
+</html>
